@@ -4,13 +4,11 @@
 
 import gettext
 import time
-import os
 
-gettext.install("Main", "locales")
+gettext.install(domain="Main", localedir="locales")
 
 
-if __name__ == '__main__':
-    cadena = None
+def main():
     print _("Hola")
     print _("Bienvenido a mi juego")
     print _("Empezemos por crear tu heroe")
@@ -39,3 +37,7 @@ if __name__ == '__main__':
     print _("Tu heroe muere, el mundo sucumbe en el caos y PHP lo domina")
     time.sleep(3)
     print _("Adios")
+
+
+if __name__ == '__main__':
+    main()
